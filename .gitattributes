@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ttf binary
+*.otf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+*.wasm binary
+*.whl binary
+*.xpi binary
+*.exe binary
+packages/*/bin/wfc binary
