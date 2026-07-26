@@ -200,7 +200,9 @@ export const runPackageVersionUpdate = async (
   console.log(
     `Updated ${summary.packageName} from ${summary.currentVersion} to ${summary.nextVersion}`,
   );
-  console.log("Updated package.json, package-lock.json, six native packages, and the WASI package");
+  console.log(
+    "Updated package.json, package-lock.json, five native packages, and the WASI package",
+  );
 };
 
 if (process.argv[1] && resolve(process.argv[1]) === CURRENT_FILE) {

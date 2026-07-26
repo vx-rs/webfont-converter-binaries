@@ -1,11 +1,10 @@
 # npm Trusted Publishing
 
-This repository publishes six public native packages and one WASI fallback from
+This repository publishes five public native packages and one WASI fallback from
 `.github/workflows/ci.yml`:
 
 - `@vx.rs/webfont-converter-bin-linux-x64`
 - `@vx.rs/webfont-converter-bin-linux-arm64`
-- `@vx.rs/webfont-converter-bin-darwin-x64`
 - `@vx.rs/webfont-converter-bin-darwin-arm64`
 - `@vx.rs/webfont-converter-bin-win32-x64`
 - `@vx.rs/webfont-converter-bin-win32-arm64`
@@ -35,7 +34,7 @@ For the initial `1.0.0` release only:
    in `vx-rs/webfont-converter-node`.
 3. Run the normal Rust `v1.0.0` release chain. The npm CLI uses OIDC when a
    trusted publisher exists and otherwise falls back to this temporary token.
-4. After all eight packages exist, configure each trusted publisher.
+4. After all seven packages exist, configure each trusted publisher.
 5. Delete both `NPM_BOOTSTRAP_TOKEN` secrets and revoke the token immediately.
 6. In each npm package's Publishing access settings, require two-factor
    authentication and disallow token-based publishing.

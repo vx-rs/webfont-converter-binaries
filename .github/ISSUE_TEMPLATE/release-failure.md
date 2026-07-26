@@ -21,19 +21,20 @@ Describe the failed validation, publication, or wrapper dispatch step.
 
 - [ ] Do not overwrite or unpublish an immutable npm version.
 - [ ] Confirm checksums and source commit in `release-manifest.json`.
-- [ ] Confirm root `package.json` and all six target manifests use the same
-      release version.
+- [ ] Confirm root `package.json`, all five native target manifests, and the
+      WASI manifest use the same release version.
 - [ ] Validate the synchronized imported release:
   ```sh
   npm run validate-release -- X.Y.Z
   ```
-- [ ] Confirm which of the six package versions exist on npm:
+- [ ] Confirm which of the five native package versions exist on npm:
   ```sh
-  for target in linux-x64 linux-arm64 darwin-x64 darwin-arm64 win32-x64 win32-arm64; do
+  for target in linux-x64 linux-arm64 darwin-arm64 win32-x64 win32-arm64; do
     npm view "@vx.rs/webfont-converter-bin-$target@X.Y.Z" version \
       --registry=https://registry.npmjs.org
   done
   ```
-- [ ] Stop wrapper publication until all six matching versions exist.
+- [ ] Stop wrapper publication until all five native packages and the WASI
+      package exist at the matching version.
 - [ ] If any package was published, prepare a corrected new Rust patch version.
 - [ ] Record the final resolution and close this issue.

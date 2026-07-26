@@ -11,8 +11,8 @@ npm install @vx.rs/webfont-converter
 ```
 
 The launcher selects a runnable native optional package for the current
-platform. Supported packages cover Linux x64 and arm64, macOS x64 and arm64,
-and Windows x64 and arm64. If no native binary can run, it uses the slower
+platform. Supported packages cover Linux x64 and arm64, macOS arm64, and
+Windows x64 and arm64. If no native binary can run, it uses the slower
 platform-independent WASI compatibility fallback.
 
 Published packages contain either a target-specific native executable or the

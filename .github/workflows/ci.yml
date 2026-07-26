@@ -39,9 +39,6 @@ jobs:
           - runner: ubuntu-24.04-arm
             directory: linux-arm64
             executable: wfc
-          - runner: macos-13
-            directory: darwin-x64
-            executable: wfc
           - runner: macos-14
             directory: darwin-arm64
             executable: wfc
@@ -127,7 +124,6 @@ jobs:
           for package_name in \
             @vx.rs/webfont-converter-bin-linux-x64 \
             @vx.rs/webfont-converter-bin-linux-arm64 \
-            @vx.rs/webfont-converter-bin-darwin-x64 \
             @vx.rs/webfont-converter-bin-darwin-arm64 \
             @vx.rs/webfont-converter-bin-win32-x64 \
             @vx.rs/webfont-converter-bin-win32-arm64 \
@@ -150,7 +146,7 @@ jobs:
       - name: Publish all stable target packages with trusted publishing
         shell: bash
         run: |
-          for target in linux-x64 linux-arm64 darwin-x64 darwin-arm64 win32-x64 win32-arm64 wasi; do
+          for target in linux-x64 linux-arm64 darwin-arm64 win32-x64 win32-arm64 wasi; do
             pushd "packages/$target"
             npm publish --provenance --access public
             popd

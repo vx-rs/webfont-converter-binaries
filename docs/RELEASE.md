@@ -3,7 +3,7 @@
 The private Rust release is the only source of a stable binary-package
 version. Do not independently tag or publish this repository.
 
-The private workspace package, six public native target packages, and one
+The private workspace package, five public native target packages, and one
 platform-independent WASI fallback package use the same version. For local
 metadata maintenance, use:
 

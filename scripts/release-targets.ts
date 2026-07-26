@@ -15,7 +15,6 @@ export type WasiReleaseTarget = {
 export const RELEASE_TARGETS: ReleaseTarget[] = [
   { architecture: "x64", executable: "wfc", packageDirectory: "linux-x64", platform: "linux" },
   { architecture: "arm64", executable: "wfc", packageDirectory: "linux-arm64", platform: "linux" },
-  { architecture: "x64", executable: "wfc", packageDirectory: "darwin-x64", platform: "darwin" },
   {
     architecture: "arm64",
     executable: "wfc",
