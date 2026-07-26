@@ -105,8 +105,6 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_BOOTSTRAP_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
